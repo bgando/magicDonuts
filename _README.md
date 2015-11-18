@@ -1,8 +1,8 @@
 # GACC
 
-> Gathering the programming community
+> With over 10 Million registered users, GitHub hosts a giant, and growing, global community of programmers. GACC is your bridge to the programming community. 
 
-GACC is __Gathering All Crafty Coders__
+GACC is __Gathering All Crafty Coders__, Beginners Welcome.
 
 $ git Gather
 
@@ -14,7 +14,16 @@ $ git Connect
 
 $ git Crafty
 
-    Share your code live via an embedded codeshare window. You'll remain conneted with your chat session. 
+    Share your code live via an embedded codeshare window. You'll remain connected with your live chat session. 
+
+## Table of Contents
+
+1. [Team](#team)
+1. [Project Roadmap](#project-roadmap)
+1. [Usage](#usage)
+1. [Development](#development)
+    1. [Installing Dependencies](#installing-dependencies)
+1. [Contributing](#contributing)
 
 ## Team
 
@@ -22,23 +31,16 @@ $ git Crafty
   - __Scrum Master__: Aheri Stanford-Asiyo
   - __Development Team Members__: Gabriel Matias, Clifford Fajardo
 
-## Product Description
+<!--## Product Description-->
 
+## Project Roadmap
 
+View the project roadmap [here](https://github.com/magicDonuts/magicDonuts/issues).
 
-## Table of Contents
-
-1. [Usage](#Usage)
-1. [Requirements](#requirements)
-1. [Development](#development)
-    1. [Installing Dependencies](#installing-dependencies)
-    1. [Tasks](#tasks)
-1. [Team](#team)
-1. [Contributing](#contributing)
 
 ## Usage
 
-> Deploy with Firebase.
+> GACC is deployed with Firebase. Visit the [Firebase Webpage](https://www.firebase.com) for details. 
 
 ## Requirements
 
@@ -56,11 +58,6 @@ npm install
 bower install
 ```
 
-### Roadmap
-
-View the project roadmap [here](LINK_TO_PROJECT_ISSUES)
-
-
 ## Contributing
 
-See [CONTRIBUTING.md](_CONTRIBUTING.md) for contribution guidelines.
+See [CONTRIBUTING.md](_CONTRIBUTING.md) and [STYLE_GUIDE.md](_STYLE_GUIDE.md) for contribution guidelines and our style guide.
