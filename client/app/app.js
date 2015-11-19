@@ -4,7 +4,6 @@ angular.module("myApp", [
 	"ui.router",
 	"myApp.services",
 	"myApp.user",
-	"myApp.logout",
 	"myApp.search",
 	"myApp.cssMessenger",
 	"myApp.jqueryMessenger",
@@ -38,10 +37,6 @@ angular.module("myApp", [
 			url:"/home",
 			views: {
 				"": { templateUrl: "app/home/home.html" },
-				// "logOut@home": {
-				// 	templateUrl: "app/logout/logout.html",
-				// 	controller: "LogOutController"
-				// },
 				//html and controller required for onlineUsers view
 				"onlineUsers@home": { 
 					templateUrl: "app/home/registereduser/registereduser.html",
