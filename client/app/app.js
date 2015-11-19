@@ -3,7 +3,7 @@ angular.module("myApp", [
 	"firebase",
 	"ui.router",
 	"myApp.services",
-	"myApp.user",
+	"myApp.logout",
 	"myApp.search",
 	"myApp.cssMessenger",
 	"myApp.jqueryMessenger",
@@ -37,11 +37,12 @@ angular.module("myApp", [
 			url:"/home",
 			views: {
 				"": { templateUrl: "app/home/home.html" },
+				// "logOut@home": {
+				// 	templateUrl: "app/logout/logout.html",
+				// 	controller: "LogOutController"
+				// },
 				//html and controller required for onlineUsers view
-				"onlineUsers@home": { 
-					templateUrl: "app/home/registereduser/registereduser.html",
-					controller: "User"
-					},
+				"onlineUsers@home": { template: "Welcome!"},
 				//html and controller required for chatrooms view
 				"roomList@home": { templateUrl: "app/home/roomlist.html" },
 				//html and controller required for userSearch view
@@ -57,7 +58,7 @@ angular.module("myApp", [
 			views: {
 				"": { templateUrl: "app/chatrooms/jquery/chatroom.html" },
 				// html and controller required for onlineUsers view
-				"onlineUsers@jqueryChatroom": { template: "online users column!!"},
+				"onlineUsers@jqueryChatroom": { templateUrl: "app/resources.html"},
 		// 		//html and controller required for chatrooms view
 				"codeShare@jqueryChatroom": { 
 					templateUrl: "app/chatrooms/jquery/codeshare.html"
@@ -75,7 +76,7 @@ angular.module("myApp", [
 			views: {
 				"": { templateUrl: "app/chatrooms/nodejs/chatroom.html" },
 				// html and controller required for onlineUsers view
-				"onlineUsers@nodeChatroom": { template: "online users column!!"},
+				"onlineUsers@nodeChatroom": { templateUrl: "app/resources.html"},
 		// 		//html and controller required for chatrooms view
 				"codeShare@nodeChatroom": { 
 					templateUrl: "app/chatrooms/nodejs/codeshare.html"
@@ -93,7 +94,7 @@ angular.module("myApp", [
 			views: {
 				"": { templateUrl: "app/chatrooms/angularjs/chatroom.html" },
 				// html and controller required for onlineUsers view
-				"onlineUsers@angularChatroom": { template: "online users column!!"},
+				"onlineUsers@angularChatroom": { templateUrl: "app/resources.html"},
 		// 		//html and controller required for chatrooms view
 				"codeShare@angularChatroom": { 
 					templateUrl: "app/chatrooms/angularjs/codeshare.html"
@@ -111,8 +112,7 @@ angular.module("myApp", [
 			views: {
 				"": { templateUrl: "app/chatrooms/python/chatroom.html" },
 				// html and controller required for onlineUsers view
-				"onlineUsers@pythonChatroom": { template: "online users column!!"},
-		// 		//html and controller required for chatrooms view
+				"onlineUsers@pythonChatroom": { templateUrl: "app/resources.html"},		// 		//html and controller required for chatrooms view
 				"codeShare@pythonChatroom": { 
 					templateUrl: "app/chatrooms/python/codeshare.html"
 				},
@@ -129,7 +129,7 @@ angular.module("myApp", [
 			views: {
 				"": { templateUrl: "app/chatrooms/swift/chatroom.html" },
 				// html and controller required for onlineUsers view
-				"onlineUsers@swiftChatroom": { template: "online users column!!"},
+				"onlineUsers@swiftChatroom": { templateUrl: "app/resources.html"},
 		// 		//html and controller required for chatrooms view
 				"codeShare@swiftChatroom": { 
 					templateUrl: "app/chatrooms/swift/codeshare.html"
@@ -147,7 +147,7 @@ angular.module("myApp", [
 			views: {
 				"": { templateUrl: "app/chatrooms/rubyOnRails/chatroom.html" },
 				// html and controller required for onlineUsers view
-				"onlineUsers@rubyOnRailsChatroom": { template: "online users column!!"},
+				"onlineUsers@rubyOnRailsChatroom": { templateUrl: "app/resources.html"},
 		// 		//html and controller required for chatrooms view
 				"codeShare@rubyOnRailsChatroom": { 
 					templateUrl: "app/chatrooms/rubyOnRails/codeshare.html"
@@ -165,8 +165,7 @@ angular.module("myApp", [
 			views: {
 				"": { templateUrl: "app/chatrooms/HTML5/chatroom.html" },
 				// html and controller required for onlineUsers view
-				"onlineUsers@Html5Chatroom": { template: "online users column!!"},
-		// 		//html and controller required for chatrooms view
+				"onlineUsers@Html5Chatroom": { templateUrl: "app/resources.html"},		// 		//html and controller required for chatrooms view
 				"codeShare@Html5Chatroom": { 
 					templateUrl: "app/chatrooms/HTML5/codeshare.html"
 				},
@@ -183,8 +182,7 @@ angular.module("myApp", [
 			views: {
 				"": { templateUrl: "app/chatrooms/CSS/chatroom.html" },
 				// html and controller required for onlineUsers view
-				"onlineUsers@CssChatroom": { template: "online users column!!"},
-		// 		//html and controller required for chatrooms view
+				"onlineUsers@CssChatroom": { templateUrl: "app/resources.html"},		// 		//html and controller required for chatrooms view
 				"codeShare@CssChatroom": { 
 					templateUrl: "app/chatrooms/CSS/codeshare.html"
 				},
@@ -197,8 +195,7 @@ angular.module("myApp", [
 		});
 
 	$urlRouterProvider.otherwise("/login");
-})
-	.constant("FirebaseUrl", "https://gitlytest.firebaseio.com/")
+});
 
 //route manager (.config) also goes here
 
